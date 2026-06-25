@@ -1,0 +1,10 @@
+<button onclick="indir()">APK İndir</button>
+
+<script>
+function indir() {
+    const a = document.createElement("a");
+    a.href = "app.apk";
+    a.download = "app.apk";
+    a.click();
+}
+</script>
