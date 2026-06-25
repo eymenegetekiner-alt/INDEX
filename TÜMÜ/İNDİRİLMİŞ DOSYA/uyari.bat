@@ -8,11 +8,15 @@ echo Bu sadece bir test dosyasi
 echo Bilgisayar guvende olmayabilir
 echo bilgisayar tehlikede
 color a
+timeout 2
 color rd
+timeout 2
 color 1
+timeout 2
 color 2
+timeout 2
 color 3
-echo 20 saniye icinde bilgisayarında kamera acilicak
+echo 20 saniye icinde bilgisayarinda kamera acilicak
 timeout 20
 start microsoft.windows.camera:
 start
