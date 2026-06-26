@@ -26,4 +26,5 @@ echo you
 timeout 2
 echo died
 pause
-exit
+color 4
+dir/s
