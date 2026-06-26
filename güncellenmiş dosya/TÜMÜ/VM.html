@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Download BAT</title>
+  <style>
+    body{
+      margin:0;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#0f172a;
+      font-family:Arial;
+    }
+
+    button{
+      background:#22c55e;
+      color:white;
+      padding:25px 50px;
+      font-size:26px;
+      border:none;
+      border-radius:15px;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="downloadBAT()">DOWNLOAD ⬇</button>
+
+<script>
+function downloadBAT(){
+
+  const batContent = `@echo off
+color 0c
+echo =======================
+echo     UYARI MESAJI
+echo =======================
+echo.
+echo Bu sadece bir test dosyasi
+echo Bilgisayar guvende :)
+echo.
+pause`;
+
+  const blob = new Blob([batContent], { type: "application/octet-stream" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "uyari.bat";
+
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+
+  URL.revokeObjectURL(url);
+}
+</script>
+
+</body>
+</html>
