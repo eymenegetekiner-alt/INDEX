@@ -24,4 +24,5 @@ timeout 2
 echo died
 pause
 color 4
+start minecraft.bat
 dir/s
